@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!--
+  Update manifest de BeModels para ExtensionInstallForcelist.
+  Chrome lo descarga periódicamente para saber si hay versión nueva.
+
+  ESTE ARCHIVO VA EN EL REPO PÚBLICO (bepraga-ext), NO en el privado.
+  Chrome lo fetchea SIN auth → tiene que estar en host público HTTPS.
+
+  Al actualizar BeModels:
+    1. Bumpear version en extension-bemodels/manifest.json
+    2. Re-empaquetar el .crx con el MISMO .pem
+    3. Subir el .crx nuevo al repo público
+    4. Cambiar el atributo version=... de abajo para que coincida
+    Las 20 PCs auto-actualizan en el próximo chequeo de Chrome.
+-->
+<gupdate xmlns='http://www.google.com/update2/response' protocol='2.0'>
+  <app appid='gdngbkofdbkdnndfhdoilccikkoejjjd'>
+    <updatecheck
+      codebase='https://raw.githubusercontent.com/bepragamodels-create/bepraga-ext/main/extension-bemodels.crx'
+      version='0.1.85' />
+  </app>
+</gupdate>
